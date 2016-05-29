@@ -2,3 +2,54 @@ body {
   font-family: Lucida Console, Monaco5, monospace;
   height: 100vh;
 }
+
+* {
+  text-align: center;
+  margin: 3px;
+}
+
+.app {
+  width: 400px;
+  margin: auto;
+}
+
+.search-bar {
+  margin-top: 40px;
+  width: 380px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 2px;
+  text-align: left;
+}
+
+.list-area {
+  width: 100%;
+  height: 400px;
+  border: 2px solid black;
+  border-radius: 2px;
+  overflow-y: scroll
+}
+
+.list-item {
+  background-color: lightgray;
+  height: 50px;
+}
+
+.button-list {
+  width: 400px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+button {
+  background: none;
+  border: 2px solid black;
+  border-radius: 2px;
+  padding: 8px;
+  margin-left: 0px;
+}
+
+button:last-of-type {
+  margin-left: auto;
+  margin-right: -4px;
+}
