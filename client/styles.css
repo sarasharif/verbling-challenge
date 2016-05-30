@@ -37,6 +37,7 @@ body {
   min-height: 50px;
   margin: 5px;
   padding: 5px;
+  border-radius: 2px;
 }
 
 .list-item > p {
@@ -61,8 +62,6 @@ body {
   top: 0px;
   outline: none;
   border: none;
-  outline: none;
-  display: flex;
   align-content: center;
   justify-content: center;
   box-shadow: none;

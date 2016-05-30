@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SearchBar from './SearchBar';
+// import SearchBar from './SearchBar';
 import ListArea from './ListArea';
 
 export default class App extends React.Component {
@@ -10,7 +10,8 @@ export default class App extends React.Component {
     this.state = {
       items: [],
       toggleStatus: 1,
-      toggleCommand: 1
+      toggleCommand: 1,
+      input: "",
     };
   }
 
@@ -53,16 +54,29 @@ export default class App extends React.Component {
     });
   }
 
+  appendInput(e) {
+    this.setState({
+      input: e.target.value
+    });
+    console.log(this.state);
+  }
+
+  searchCompare(element) {
+    return element[0].concat(element[1]).includes(this.state.input);
+  }
+
   render() {
+
+    var items = this.state.items.slice().reverse().filter(this.searchCompare.bind(this));
     return (
       <div className="app">
-        <SearchBar />
-        <ListArea items={this.state.items.slice().reverse()} toggleStatus={this.state.toggleStatus} toggleCommand={this.state.toggleCommand} />
+        <input className="search-bar" onChange={this.appendInput.bind(this)} placeholder="Recherche"></input>
+        <ListArea items={items} toggleStatus={this.state.toggleStatus} toggleCommand={this.state.toggleCommand} />
         <div className="button-list">
           <button onClick={this.openItems.bind(this)} className="button">Open All</button>
           <button onClick={this.closeItems.bind(this)} className="button">Close All</button>
           <button onClick={this.toggleItems.bind(this)} className="button">Toggle All</button>
-          <button onClick={this.addListItem.bind(this)} className="button">Add</button>
+          <button onClick={this.addListItem.bind(this)} className="button">+</button>
         </div>
       </div>
     );
