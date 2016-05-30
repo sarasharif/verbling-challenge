@@ -6,16 +6,18 @@ export default class ListArea extends React.Component {
     super(props);
   }
 
-  componentWillReceiveProps(props) {
-  }
-
   render() {
     var that = this;
     return (
       <div className="list-area">
         {
           that.props.items.map(function(item){
-            return <ListItem title={item[0]} body={item[1]} toggleStatus={that.props.toggleStatus} toggleCommand={that.props.toggleCommand} />;
+            return <ListItem
+              title={item[0]}
+              body={item[1]}
+              toggleStatus={that.props.toggleStatus}
+              toggleCommand={that.props.toggleCommand}
+            />;
           })
         }
       </div>

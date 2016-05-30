@@ -1,6 +1,5 @@
 import React from 'react';
 
-// import SearchBar from './SearchBar';
 import ListArea from './ListArea';
 
 export default class App extends React.Component {
@@ -58,7 +57,6 @@ export default class App extends React.Component {
     this.setState({
       input: e.target.value
     });
-    console.log(this.state);
   }
 
   searchCompare(element) {
