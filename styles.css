@@ -31,8 +31,43 @@ body {
 }
 
 .list-item {
-  background-color: lightgray;
-  height: 50px;
+  position: relative;
+  background-color: slategray;
+  height: auto;
+  min-height: 50px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.list-item > p {
+  text-align: left;
+}
+
+.list-title {
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-body {
+  word-wrap: normal;
+
+}
+
+.toggle-button {
+  position: absolute;
+  right: 8px;
+  top: 0px;
+  outline: none;
+  border: none;
+  outline: none;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  box-shadow: none;
+  text-align: center;
+
 }
 
 .button-list {
