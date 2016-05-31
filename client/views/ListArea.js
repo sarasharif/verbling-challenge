@@ -78,7 +78,7 @@ class ListItem extends React.Component {
 
   listItemDescription() {
     if (this.state.toggleStatus === this.state.toggleCommand) {
-      return (<p></p>);
+      return (<div></div>);
     } else {
       return (
         <p className="list-body">{this.props.body}</p>

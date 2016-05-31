@@ -35,7 +35,7 @@ body {
   position: relative;
   background-color: slategray;
   height: auto;
-  min-height: 50px;
+  min-height: 40px;
   margin: 5px;
   padding: 5px;
   border-radius: 2px;
@@ -49,6 +49,7 @@ body {
 .list-title {
   width: 80%;
   font-weight: bold;
+  font-size: 20px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
